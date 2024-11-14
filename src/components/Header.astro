@@ -1,0 +1,25 @@
+---
+let currentPath = Astro.url.pathname.slice(1);
+if (currentPath === "links") {
+  currentPath = "Links Importantes";
+} else if (currentPath === "solucoes") {
+  currentPath = "Soluções";
+}
+
+const isHomePage = currentPath === "";
+---
+
+{
+  !isHomePage && (
+    <header class="w-full px-4 mx-auto">
+      <div class="flex justify-between items-center py-6 mt-2">
+        <span class="uppercase font-medium text-lg">{currentPath}</span>
+        <img
+          src="https://github.com/vinicius-dsr.png"
+          alt="Foto do perfil"
+          class="w-16 h-16 rounded-full"
+        />
+      </div>
+    </header>
+  )
+}

@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+import Header from "../components/Header.astro";
 import Nav from "../components/Nav.astro";
 ---
 
@@ -16,10 +18,12 @@ import Nav from "../components/Nav.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body
     class="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-black text-white"
   >
+    <Header />
     <Nav />
     <slot />
   </body>
