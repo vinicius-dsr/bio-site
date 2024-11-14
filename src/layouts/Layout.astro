@@ -21,11 +21,13 @@ import Nav from "../components/Nav.astro";
     <ViewTransitions />
   </head>
   <body
-    class="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-black text-white"
+    class="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-black text-white antialiased"
     transition:animate={fade({ duration: "0.4s" })}
   >
     <Header />
     <Nav />
-    <slot />
+    <div class="h-[70vh]">
+      <slot />
+    </div>
   </body>
 </html>
