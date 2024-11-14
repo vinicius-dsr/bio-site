@@ -4,7 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import { ViewTransitions } from "astro:transitions";
+import { ViewTransitions, fade } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Nav from "../components/Nav.astro";
 ---
@@ -22,6 +22,7 @@ import Nav from "../components/Nav.astro";
   </head>
   <body
     class="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-black text-white"
+    transition:animate={fade({ duration: "0.4s" })}
   >
     <Header />
     <Nav />
