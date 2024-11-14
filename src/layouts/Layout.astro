@@ -4,10 +4,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Nav from "../components/Header.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -17,8 +18,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-black"
+    class="min-h-screen bg-gradient-to-br from-zinc-800 via-zinc-900 to-black text-white"
   >
+    <Nav />
     <slot />
   </body>
 </html>
