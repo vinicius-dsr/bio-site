@@ -13,7 +13,9 @@ const isHomePage = currentPath === "";
   !isHomePage && (
     <header class="w-full px-4 mx-auto">
       <div class="flex justify-between items-center py-6 mt-2">
-        <span class="uppercase font-medium text-lg">{currentPath}</span>
+        <span class="uppercase font-medium text-lg text-white/60">
+          {currentPath}
+        </span>
         <a href="/">
           <img
             src="https://github.com/vinicius-dsr.png"
