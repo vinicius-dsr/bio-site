@@ -1,5 +1,7 @@
 ---
-let currentPath = Astro.url.pathname.slice(1);
+let currentPath = Astro.url.pathname;
+currentPath = currentPath.replace(/^\/+|\/+$/g, "");
+
 if (currentPath === "links") {
   currentPath = "Links Importantes";
 } else if (currentPath === "servicos") {
