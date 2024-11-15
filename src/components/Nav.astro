@@ -4,31 +4,53 @@ import Info from "./icons/info.astro";
 import Link from "./icons/link.astro";
 import Solution from "./icons/solution.astro";
 import Whatsapp from "./icons/whatsapp.astro";
+
+const currentPath = Astro.url.pathname;
 ---
 
 <nav
   class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 bg-zinc-800/90 backdrop-blur-md py-3 px-2 rounded-full"
 >
-  <a href="/sobre" class="p-2 text-white/70 hover:text-white transition-colors"
-    ><Info class="h-6 w-6" /></a
+  <a
+    href="/sobre"
+    class:list={[
+      "p-2 transition-colors",
+      currentPath === "/sobre"
+        ? "text-white"
+        : "text-white/60 hover:text-white",
+    ]}><Info class="h-6 w-6" /></a
   >
   <a
     href="/solucoes"
-    class="p-2 text-white/70 hover:text-white transition-colors"
-    ><Solution class="h-6 w-6" /></a
+    class:list={[
+      "p-2 transition-colors",
+      currentPath === "/solucoes"
+        ? "text-white"
+        : "text-white/60 hover:text-white",
+    ]}><Solution class="h-6 w-6" /></a
   >
-  <a href="/links" class="p-2 text-white/70 hover:text-white transition-colors"
-    ><Link class="h-6 w-6" /></a
+  <a
+    href="/links"
+    class:list={[
+      "p-2 transition-colors",
+      currentPath === "/links"
+        ? "text-white"
+        : "text-white/60 hover:text-white",
+    ]}><Link class="h-6 w-6" /></a
   >
   <a
     href="/contatos"
-    class="p-2 text-white/70 hover:text-white transition-colors"
-    ><Contact class="h-6 w-6" /></a
+    class:list={[
+      "p-2 transition-colors",
+      currentPath === "/contatos"
+        ? "text-white"
+        : "text-white/60 hover:text-white",
+    ]}><Contact class="h-6 w-6" /></a
   >
   <a
     href="https://wa.me/5591992761377"
     target="_blank"
-    class="p-2 text-white/70 hover:text-white transition-colors"
+    class="p-2 text-white/60 hover:text-white transition-colors"
     ><Whatsapp class="h-6 w-6" /></a
   >
 </nav>
