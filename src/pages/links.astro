@@ -11,7 +11,8 @@ import Layout from "../layouts/Layout.astro";
       {
         links.map((link) => (
           <Button variant="primary" href={link.href}>
-            {link.name} <ArrowUpRight class="text-blue-500 text-lg" />
+            <span class="text-white/70">{link.name}</span>{" "}
+            <ArrowUpRight class="text-blue-500 text-lg" />
           </Button>
         ))
       }

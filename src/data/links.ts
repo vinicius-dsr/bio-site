@@ -1,18 +1,18 @@
 export const links = [
 	{
-		name: "Projetos",
-		href: "#",
-	},
-	{
-		name: "Blog",
-		href: "#",
-	},
-	{
 		name: "Portfolio",
-		href: "",
+		href: "https://vinidev.tech",
 	},
 	{
-		name: "Agenda atendimento",
-		href: "#",
+		name: "Linkedin",
+		href: "https://www.linkedin.com/in/viniciusreis-pgm/",
+	},
+	{
+		name: "Github",
+		href: "https://github.com/vinicius-dsr",
+	},
+	{
+		name: "Fale comigo",
+		href: "https://wa.me/5591992761377",
 	},
 ];
