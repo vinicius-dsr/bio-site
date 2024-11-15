@@ -1,21 +1,18 @@
 ---
+import { services } from "../data/services";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Bio Site - Soluções">
-  <main class="h-[65vh]">
+  <main class="h-[67vh]">
     <div
       class="flex flex-col justify-center h-full gap-4 max-w-[70vw] text-white/60 text-lg"
     >
-      <span>Desenvolvimento Web</span>
-      <hr />
-      <span>Desenvolvimento Mobile</span>
-      <hr />
-      <span>UI/UX Design</span>
-      <hr />
-      <span>E-commerce</span>
-      <hr />
-      <span>Seo</span>
+      {
+        services.map((service) => (
+          <span class="border-b pb-4 border-zinc-500/60">{service.name}</span>
+        ))
+      }
     </div>
   </main>
 </Layout>
