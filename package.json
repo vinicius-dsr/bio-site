@@ -17,6 +17,7 @@
     "typescript": "^5.6.3"
   },
   "devDependencies": {
-    "astro-icon": "^1.1.2"
+    "astro-icon": "^1.1.2",
+    "tailwind-merge": "^2.5.4"
   }
 }
