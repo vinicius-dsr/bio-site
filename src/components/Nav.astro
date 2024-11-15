@@ -5,52 +5,31 @@ import Link from "./icons/link.astro";
 import Solution from "./icons/solution.astro";
 import Whatsapp from "./icons/whatsapp.astro";
 
+import { nav } from "../data/nav";
+
 const currentPath = Astro.url.pathname;
 ---
 
 <nav
   class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 bg-zinc-800/90 backdrop-blur-md py-3 px-2 rounded-full"
 >
-  <a
-    href="/sobre"
-    class:list={[
-      "p-2 transition-colors",
-      currentPath === "/sobre"
-        ? "text-white"
-        : "text-white/60 hover:text-white",
-    ]}><Info class="h-6 w-6" /></a
-  >
-  <a
-    href="/servicos"
-    class:list={[
-      "p-2 transition-colors",
-      currentPath === "/servicos"
-        ? "text-white"
-        : "text-white/60 hover:text-white",
-    ]}><Solution class="h-6 w-6" /></a
-  >
-  <a
-    href="/links"
-    class:list={[
-      "p-2 transition-colors",
-      currentPath === "/links"
-        ? "text-white"
-        : "text-white/60 hover:text-white",
-    ]}><Link class="h-6 w-6" /></a
-  >
-  <a
-    href="/contatos"
-    class:list={[
-      "p-2 transition-colors",
-      currentPath === "/contatos"
-        ? "text-white"
-        : "text-white/60 hover:text-white",
-    ]}><Contact class="h-6 w-6" /></a
-  >
-  <a
-    href="https://wa.me/5591992761377"
-    target="_blank"
-    class="p-2 text-white/60 hover:text-white transition-colors"
-    ><Whatsapp class="h-6 w-6" /></a
-  >
+  {
+    nav.map((item) => {
+      const Icon = item.icon;
+      return (
+        <a
+          href={item.href}
+          target={item.target}
+          class:list={[
+            "p-2 transition-colors",
+            currentPath === item.href
+              ? "text-white"
+              : "text-white/60 hover:text-white",
+          ]}
+        >
+          <Icon class="h-6 w-6" />
+        </a>
+      );
+    })
+  }
 </nav>
