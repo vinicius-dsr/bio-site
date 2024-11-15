@@ -12,7 +12,7 @@ const { variant, ...props } = Astro.props;
 <a
   class={twMerge(
     "py-4 px-5 flex items-center gap-2",
-    variant === "primary" && "bg-zinc-600/70 backdrop-blur-md rounded-md  ",
+    variant === "primary" && "bg-gray-600/70 backdrop-blur-md rounded-md  ",
     variant === "secondary" &&
       "text-black bg-background-light dark:bg-background-dark dark:text-white rounded-xl hover:bg-background-dark/30 hover:dark:bg-background-light/30 transition-colors",
     Astro.props.class
