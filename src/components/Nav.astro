@@ -1,13 +1,10 @@
 ---
-import Contact from "./icons/contact.astro";
-import Info from "./icons/info.astro";
-import Link from "./icons/link.astro";
-import Solution from "./icons/solution.astro";
-import Whatsapp from "./icons/whatsapp.astro";
-
 import { nav } from "../data/nav";
 
 const currentPath = Astro.url.pathname;
+const normalizedCurrentPath = currentPath.endsWith("/")
+  ? currentPath.slice(0, -1)
+  : currentPath;
 ---
 
 <nav
@@ -16,13 +13,17 @@ const currentPath = Astro.url.pathname;
   {
     nav.map((item) => {
       const Icon = item.icon;
+      // Normalize item href the same way
+      const normalizedHref = item.href.endsWith("/")
+        ? item.href.slice(0, -1)
+        : item.href;
       return (
         <a
           href={item.href}
           target={item.target}
           class:list={[
             "p-2 transition-colors",
-            currentPath === item.href
+            normalizedCurrentPath === normalizedHref
               ? "text-white"
               : "text-zinc-400/60 hover:text-white",
           ]}
