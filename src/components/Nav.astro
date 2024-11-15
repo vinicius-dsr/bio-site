@@ -1,13 +1,34 @@
 ---
-
+import Contact from "./icons/contact.astro";
+import Info from "./icons/info.astro";
+import Link from "./icons/link.astro";
+import Solution from "./icons/solution.astro";
+import Whatsapp from "./icons/whatsapp.astro";
 ---
 
 <nav
   class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 bg-zinc-800/90 backdrop-blur-md py-3 px-2 rounded-full"
 >
-  <a href="/sobre" class="p-2 text-white">ℹ️</a>
-  <a href="/solucoes" class="p-2 text-white">📁</a>
-  <a href="/links" class="p-2 text-white">🔗</a>
-  <a href="/contatos" class="p-2 text-white">✉️</a>
-  <a href="#whatsapp" class="p-2 text-white">📞</a>
+  <a href="/sobre" class="p-2 text-white/70 hover:text-white transition-colors"
+    ><Info class="h-6 w-6" /></a
+  >
+  <a
+    href="/solucoes"
+    class="p-2 text-white/70 hover:text-white transition-colors"
+    ><Solution class="h-6 w-6" /></a
+  >
+  <a href="/links" class="p-2 text-white/70 hover:text-white transition-colors"
+    ><Link class="h-6 w-6" /></a
+  >
+  <a
+    href="/contatos"
+    class="p-2 text-white/70 hover:text-white transition-colors"
+    ><Contact class="h-6 w-6" /></a
+  >
+  <a
+    href="https://wa.me/5591992761377"
+    target="_blank"
+    class="p-2 text-white/70 hover:text-white transition-colors"
+    ><Whatsapp class="h-6 w-6" /></a
+  >
 </nav>

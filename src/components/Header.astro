@@ -14,11 +14,13 @@ const isHomePage = currentPath === "";
     <header class="w-full px-4 mx-auto">
       <div class="flex justify-between items-center py-6 mt-2">
         <span class="uppercase font-medium text-lg">{currentPath}</span>
-        <img
-          src="https://github.com/vinicius-dsr.png"
-          alt="Foto do perfil"
-          class="w-16 h-16 rounded-full"
-        />
+        <a href="/">
+          <img
+            src="https://github.com/vinicius-dsr.png"
+            alt="Foto do perfil"
+            class="w-16 h-16 rounded-full"
+          />
+        </a>
       </div>
     </header>
   )
